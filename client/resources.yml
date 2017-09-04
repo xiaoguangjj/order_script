@@ -1,0 +1,939 @@
+shop:
+  route_base: shops
+  apis:
+    create:
+      url: /
+      method: post
+    get:
+      url: /{shop_id}
+      method: get
+    find:
+      url: /
+      method: get
+    update:
+      url: /{shop_id}
+      method: post
+tms_work:
+  route_base: tms_works
+  apis:
+    arrive_point:
+      url: /arrive_point
+      method: post
+    cancel_reassigning:
+      url: /cancel_reassigning
+      method: post
+    switch_work_state:
+      url: /switch_work_state
+      method: post
+    confirm_pickup:
+      url: /confirm_pickup
+      method: post
+    apply_reassigning:
+      url: /apply_reassigning
+      method: post
+    confirm_delivered:
+      url: /confirm_delivered
+      method: post
+    confirm_receipted:
+      url: /confirm_receipted
+      method: post
+stock_order:
+  route_base: stock_orders
+  apis:
+    stock_order_log:
+      url: /stock_order_log
+      method: get
+    cancel_mark_error:
+      url: /cancel_mark_error
+      method: post
+    get:
+      url: /{stock_order_id}
+      method: get
+    stock_in:
+      url: /stock_in
+      method: post
+    mark_error:
+      url: /mark_error
+      method: post
+    assigned:
+      url: /assigned
+      method: post
+    statistic:
+      url: /statistic
+      method: get
+    close:
+      url: /close
+      method: post
+    find:
+      url: /
+      method: get
+    stock_out:
+      url: /stock_out
+      method: post
+    redispatch:
+      url: /redispatch
+      method: post
+poi:
+  route_base: poi
+  apis:
+    get_poi_by_address:
+      url: /get_poi_by_address
+      method: get
+    find_address:
+      url: /addresses
+      method: get
+    get_hit_vendor_areas:
+      url: /get_hit_vendor_areas
+      method: post
+    estimate_distance:
+      url: /estimate_distance
+      method: post
+    find_courier:
+      url: /couriers
+      method: post
+stock_dispatch_rule:
+  route_base: stock_dispatch_rule
+  apis:
+    create:
+      url: /create
+      method: post
+    get:
+      url: /{rule_id}
+      method: get
+    update:
+      url: /{rule_id}/update
+      method: post
+    find:
+      url: /
+      method: get
+report:
+  route_base: reports
+  apis:
+    find_shipment_daily_by_vendor:
+      url: /shipments/daily/by_vendor
+      method: get
+    find_shipment_monthly_by_seller:
+      url: /shipments/monthly/by_seller
+      method: post
+    find_shipment_daily_by_area:
+      url: /shipments/daily/by_area
+      method: post
+    find_shipment_monthly_by_courier:
+      url: /shipments/monthly/by_courier
+      method: post
+    find_shipment_monthly_by_area:
+      url: /shipments/monthly/by_area
+      method: post
+    find_order_daily_by_seller:
+      url: /orders/daily/by_seller
+      method: get
+    download_file:
+      url: /download_file
+      method: get
+    find_shipment_daily_by_seller:
+      url: /shipments/daily/by_seller
+      method: post
+    find_shipment_daily_by_courier:
+      url: /shipments/daily/by_courier
+      method: post
+wallet_withdraw:
+  route_base: wallets/withdraws
+  apis:
+    verify_withdraw_apply:
+      url: /verify
+      method: post
+    get:
+      url: /{withdraw_id}
+      method: get
+    find:
+      url: /
+      method: get
+    create_withdraw_apply:
+      url: /
+      method: post
+    confirm_withdraw:
+      url: /confirm
+      method: post
+io:
+  route_base: io
+  apis:
+    generate_qiniu_token:
+      url: /qiniu/tokens
+      method: post
+    get_openapi_log:
+      url: /openapi/log
+      method: get
+    send_sms:
+      url: /sms/send
+      method: post
+    send_admin_code:
+      url: /sms/admin_code
+      method: post
+statistic:
+  route_base: statistics
+  apis:
+    courier_new_orders:
+      url: /courier_new_orders
+      method: get
+    find_courier_shipment:
+      url: /courier_shipments
+      method: post
+    find_order:
+      url: /orders
+      method: get
+    find_shipment:
+      url: /shipments
+      method: get
+op_log:
+  route_base: op_logs
+  apis:
+    find:
+      url: /
+      method: get
+    get:
+      url: /{audit_log_id}
+      method: get
+settlement:
+  route_base: settlement
+  apis:
+    create:
+      url: /
+      method: post
+    update:
+      url: /{settlement_id}
+      method: post
+    find:
+      url: /
+      method: get
+    get:
+      url: /{settlement_id}
+      method: get
+webhook:
+  route_base: webhook
+  apis:
+    find:
+      url: /
+      method: get
+    get:
+      url: /{webhook_id}
+      method: get
+biz_area:
+  route_base: areas
+  apis:
+    total_list:
+      url: /total_list
+      method: get
+    create:
+      url: /create
+      method: post
+    get:
+      url: /{area_id}
+      method: get
+    update_info:
+      url: /{area_id}/update_info
+      method: get
+    publish:
+      url: /{area_id}/publish
+      method: post
+    update:
+      url: /{area_id}/update
+      method: post
+    find:
+      url: /
+      method: get
+develop:
+  route_base: develops
+  apis:
+    create:
+      url: /
+      method: post
+    get:
+      url: /{dev_id}
+      method: get
+    find:
+      url: /
+      method: get
+    update:
+      url: /{dev_id}
+      method: post
+service:
+  route_base: service
+  apis:
+    update_info:
+      url: /{service_id}/update_info
+      method: get
+    create:
+      url: /
+      method: post
+    find:
+      url: /
+      method: get
+    update:
+      url: /{service_id}
+      method: post
+    get:
+      url: /{service_id}
+      method: get
+vendor_biz_info:
+  route_base: vendor_biz_info
+  apis:
+    supply_vendor_total_list:
+      url: /supply_vendor_total_list
+      method: get
+    get:
+      url: /{biz_info_id}
+      method: get
+    banned:
+      url: /{biz_info_id}/banned
+      method: post
+    update:
+      url: /{biz_info_id}/update
+      method: post
+    vendor_total_list:
+      url: /vendor_total_list
+      method: get
+    active:
+      url: /{biz_info_id}/active
+      method: post
+    create:
+      url: /create
+      method: post
+    find:
+      url: /
+      method: get
+vendor_biz_area:
+  route_base: vendor_biz_area
+  apis:
+    create:
+      url: /create
+      method: post
+    get:
+      url: /{biz_area_id}
+      method: get
+    update:
+      url: /{biz_area_id}/update
+      method: post
+    find:
+      url: /
+      method: get
+storage:
+  route_base: storage
+  apis:
+    upload:
+      url: /assets
+      method: post
+seller:
+  route_base: sellers
+  apis:
+    apply_verify:
+      url: /{seller_id}/apply_verify
+      method: post
+    get:
+      url: /{seller_id}
+      method: get
+    update:
+      url: /{seller_id}
+      method: post
+    get_seller_service_city:
+      url: /{seller_id}/get_seller_service_city
+      method: get
+    catalog:
+      url: /catalog
+      method: get
+    find_services_by_coordinate:
+      url: /{seller_id}/find_services_by_coordinate
+      method: post
+    find:
+      url: /
+      method: get
+    available_vendor:
+      url: /{seller_id}/available_vendor
+      method: post
+    approve_verify:
+      url: /{seller_id}/approve_verify
+      method: post
+delivery_dispatch_rule:
+  route_base: delivery_dispatch_rule
+  apis:
+    get:
+      url: /{rule_id}
+      method: get
+    create:
+      url: /create
+      method: post
+    update_info:
+      url: /{rule_id}/update_info
+      method: get
+    publish:
+      url: /{rule_id}/publish
+      method: post
+    update:
+      url: /{rule_id}/update
+      method: post
+    disable:
+      url: /{rule_id}/disable
+      method: post
+    find:
+      url: /
+      method: get
+courier_dispatch_rule:
+  route_base: courier_dispatch_rule
+  apis:
+    get:
+      url: /{rule_id}
+      method: get
+    create:
+      url: /create
+      method: post
+    update_info:
+      url: /{rule_id}/update_info
+      method: get
+    publish:
+      url: /{rule_id}/publish
+      method: post
+    update:
+      url: /{rule_id}/update
+      method: post
+    disable:
+      url: /{rule_id}/disable
+      method: post
+    find:
+      url: /
+      method: get
+role:
+  route_base: roles
+  apis:
+    create:
+      url: /
+      method: post
+    get:
+      url: /{role_id}
+      method: get
+    find:
+      url: /
+      method: get
+    update:
+      url: /{role_id}
+      method: post
+shipment:
+  route_base: shipments
+  apis:
+    find_by_barcode:
+      url: /find_by_barcode
+      method: get
+    get_track_logs:
+      url: /{shipment_id}/track_logs
+      method: get
+    mark_recover:
+      url: /mark_recover
+      method: post
+    get:
+      url: /{shipment_id}
+      method: get
+    mark_error:
+      url: /mark_error
+      method: post
+    reassign:
+      url: /reassign
+      method: post
+    close:
+      url: /close
+      method: post
+    find:
+      url: /
+      method: get
+region_hit_rule:
+  route_base: region_hit_rule
+  apis:
+    create:
+      url: /
+      method: post
+    get:
+      url: /{rule_id}
+      method: get
+    find:
+      url: /
+      method: get
+    publish:
+      url: /{rule_id}/publish
+      method: get
+    update:
+      url: /{rule_id}
+      method: post
+grid_map:
+  route_base: maps
+  apis:
+    get_region:
+      url: /regions/{region_id}
+      method: get
+    find_region:
+      url: /regions
+      method: get
+    create_region:
+      url: /regions
+      method: post
+    update_region:
+      url: /regions/{region_id}
+      method: post
+stock:
+  route_base: stock
+  apis:
+    remove_area:
+      url: /{stock_id}/remove_area
+      method: post
+    create:
+      url: /create
+      method: post
+    get:
+      url: /{stock_id}
+      method: get
+    update:
+      url: /{stock_id}/update
+      method: post
+    publish:
+      url: /{stock_id}/publish
+      method: post
+    update_info:
+      url: /{stock_id}/update_info
+      method: get
+    find:
+      url: /
+      method: get
+    add_area:
+      url: /{stock_id}/add_area
+      method: post
+qrcode_token:
+  route_base: auth/qrcode_token
+  apis:
+    check_qrcode:
+      url: /check_qrcode
+      method: post
+    create:
+      url: /
+      method: post
+vendor:
+  route_base: vendors
+  apis:
+    update:
+      url: /{vendor_id}
+      method: post
+    get:
+      url: /{vendor_id}
+      method: get
+    apply_verify:
+      url: /{vendor_id}/apply_verify
+      method: post
+    find:
+      url: /
+      method: get
+    approve_verify:
+      url: /{vendor_id}/approve_verify
+      method: post
+courier_price_rule:
+  route_base: courier_price_rule
+  apis:
+    get:
+      url: /{rule_id}
+      method: get
+    create:
+      url: /create
+      method: post
+    update_info:
+      url: /{rule_id}/update_info
+      method: get
+    publish:
+      url: /{rule_id}/publish
+      method: post
+    update:
+      url: /{rule_id}/update
+      method: post
+    find:
+      url: /
+      method: get
+courier:
+  route_base: couriers
+  apis:
+    apply_verify:
+      url: /{courier_id}/apply_verify
+      method: post
+    get:
+      url: /{courier_id}
+      method: get
+    create:
+      url: /
+      method: post
+    update:
+      url: /{courier_id}
+      method: post
+    verify_logs:
+      url: /verify_logs
+      method: get
+    find:
+      url: /
+      method: get
+    approve_verify:
+      url: /{courier_id}/approve_verify
+      method: post
+permission:
+  route_base: permissions
+  apis:
+    create:
+      url: /
+      method: post
+    update:
+      url: /{permission_id}
+      method: post
+    find:
+      url: /
+      method: get
+    get:
+      url: /{permission_id}
+      method: get
+bus:
+  route_base: channels
+  apis:
+    mock_channel_in:
+      url: /in/mock/{mock_identify}
+      method: post
+    nowpay_channel_in:
+      url: /in/nowpay
+      method: post
+    any_channel_in:
+      url: /in/any
+      method: post
+    wechat_channel_in:
+      url: /in/wechat
+      method: post
+wallet_trans:
+  route_base: wallets/trans
+  apis:
+    find:
+      url: /
+      method: get
+    get:
+      url: /{trans_id}
+      method: get
+contest_queue:
+  route_base: contest_queues
+  apis:
+    get_shipment_detail:
+      url: /shipments/{shipment_id}
+      method: get
+    fetch_by_courier:
+      url: /{courier_id}
+      method: get
+    find:
+      url: /
+      method: get
+    capture:
+      url: /{courier_id}/capture/{shipment_id}
+      method: post
+auth:
+  route_base: auth
+  apis:
+    available_vendors:
+      url: /available_vendors
+      method: get
+    login:
+      url: /login
+      method: post
+    register:
+      url: /register
+      method: post
+    check_seller_exist:
+      url: /check_seller_exist
+      method: get
+util:
+  route_base: utils
+  apis:
+    get_bulletin:
+      url: /get_bulletin
+      method: get
+    apk_download_url:
+      url: /apk_download_url
+      method: get
+    vendor_cities:
+      url: /vendor_cities
+      method: get
+    get_voice_access_token:
+      url: /get_voice_access_token
+      method: get
+    get_time:
+      url: /get_time
+      method: get
+    shipment_tags:
+      url: /shipment_tags
+      method: get
+request_token:
+  route_base: auth/request_token
+  apis:
+    create:
+      url: /
+      method: post
+wallet_refund:
+  route_base: wallets/refunds
+  apis:
+    create:
+      url: /
+      method: post
+    verify_refund_apply:
+      url: /verify
+      method: post
+vendor_price_rule:
+  route_base: vendor_price_rule
+  apis:
+    get:
+      url: /{rule_id}
+      method: get
+    create:
+      url: /create
+      method: post
+    update_info:
+      url: /{rule_id}/update_info
+      method: get
+    publish:
+      url: /{rule_id}/publish
+      method: post
+    update:
+      url: /{rule_id}/update
+      method: post
+    find:
+      url: /
+      method: get
+account:
+  route_base: accounts
+  apis:
+    change_mobile:
+      url: /change_mobile
+      method: post
+    exchange_account:
+      url: /exchange_account
+      method: get
+    get:
+      url: /{user_id}
+      method: get
+    create:
+      url: /
+      method: post
+    update:
+      url: /{user_id}
+      method: post
+    approve_qrcode:
+      url: /approve_qrcode
+      method: get
+    logout:
+      url: /logout
+      method: post
+    find:
+      url: /
+      method: get
+vendor_order:
+  route_base: vendor_order
+  apis:
+    total_statistics:
+      url: /total_statistics
+      method: get
+    get:
+      url: /{order_id}
+      method: get
+    statistics_by_seller:
+      url: /statistics_by_seller
+      method: get
+    reassign:
+      url: /assign
+      method: post
+    close:
+      url: /close
+      method: post
+    find:
+      url: /
+      method: get
+    statistics_by_area:
+      url: /statistics_by_area
+      method: get
+sop:
+  route_base: sop
+  apis:
+    create:
+      url: /
+      method: post
+    get:
+      url: /{rule_id}
+      method: get
+    find:
+      url: /
+      method: get
+    publish:
+      url: /{rule_id}/publish
+      method: get
+    update:
+      url: /{rule_id}
+      method: post
+access_token:
+  route_base: auth/access_token
+  apis:
+    revoke:
+      url: /revoke
+      method: post
+    refresh:
+      url: /refresh
+      method: post
+    exchange:
+      url: /
+      method: get
+bill:
+  route_base: bills
+  apis:
+    find_courier_daily_detail:
+      url: /couriers/daily_detail
+      method: get
+    settlement_check:
+      url: /vendors/settlement_check
+      method: post
+    find_seller_monthly:
+      url: /sellers/monthly
+      method: post
+    find_vendor_daily_detail:
+      url: /vendors/daily_detail
+      method: get
+    find_vendor_montly:
+      url: /vendors/monthly
+      method: get
+    find_vendor_daily:
+      url: /vendors/daily
+      method: get
+    find_seller_daily:
+      url: /sellers/daily
+      method: post
+    find_courier_daily:
+      url: /couriers/daily
+      method: get
+    find_courier_monthly:
+      url: /couriers/monthly
+      method: get
+contract:
+  route_base: contracts
+  apis:
+    unsign_vendor:
+      url: /unsign_vendor
+      method: post
+    get:
+      url: /{contract_id}
+      method: get
+    create:
+      url: /
+      method: post
+    update:
+      url: /{contract_id}
+      method: post
+    active:
+      url: /{contract_id}/active
+      method: post
+    find_sellers:
+      url: /sellers
+      method: get
+    find:
+      url: /
+      method: get
+acl:
+  route_base: acls
+  apis:
+    get:
+      url: /{account_id}
+      method: get
+    find:
+      url: /
+      method: get
+    update:
+      url: /{account_id}
+      method: post
+seller_order:
+  route_base: seller_orders
+  apis:
+    get:
+      url: /{order_id}
+      method: get
+    create:
+      url: /
+      method: post
+    track_log:
+      url: /track_log
+      method: get
+    urge_deliver:
+      url: /{order_id}/urge
+      method: post
+    close:
+      url: /close
+      method: post
+    find:
+      url: /
+      method: get
+    estimate_fee:
+      url: /estimate_fee
+      method: post
+wallet:
+  route_base: wallets
+  apis:
+    get:
+      url: /{wallet_id}
+      method: get
+upload_task:
+  route_base: upload_tasks
+  apis:
+    get:
+      url: /{task_id}
+      method: get
+    publish_orders:
+      url: /publish_orders
+      method: post
+    create:
+      url: /
+      method: post
+    find:
+      url: /
+      method: get
+    download_order_template:
+      url: /download_order_template
+      method: get
+    get_task_orders:
+      url: /orders
+      method: get
+    upload_done:
+      url: /{task_id}
+      method: post
+team:
+  route_base: team
+  apis:
+    get:
+      url: /{team_id}
+      method: get
+    add_member:
+      url: /{team_id}/add_member
+      method: post
+    create:
+      url: /create
+      method: post
+    remove_member:
+      url: /{team_id}/remove_member
+      method: post
+    update:
+      url: /{team_id}/update
+      method: post
+    find:
+      url: /
+      method: get
+wallet_recharge:
+  route_base: wallets/recharge
+  apis:
+    create:
+      url: /
+      method: post
+audit_log:
+  route_base: audit_logs
+  apis:
+    find:
+      url: /
+      method: get
+    get:
+      url: /{audit_log_id}
+      method: get
